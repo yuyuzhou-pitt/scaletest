@@ -40,6 +40,7 @@ while [ $i -lt $Nums ]; do
     cp ifcfg-ens2f0 ifcfg-ens2f0-"${i}"
     echo "IPADDR=${Guest_Private_IP[${i}]}" >> ifcfg-ens2f0-"${i}"
     echo "MACADDR=${Guest_MAC_ADDR[${i}]}" >> ifcfg-ens2f0-"${i}"
+    echo ${Host_Private_IP[${i}]} >> hostfile
     i=$[$i+1]
 done 
 

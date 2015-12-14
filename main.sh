@@ -31,11 +31,16 @@ do
 done < "$filename"
 
 
-#echo ${Host_Public_IP[1]}
-#echo ${Host_Private_IP[1]}
-#echo ${Guest_Private_IP[1]}
-#echo ${Guest_MAC_ADDR[1]}
-
-# done 
+i=0
+while [ $i -lt $Nums ]; do
+#    echo ${Host_Public_IP[${i}]}
+#    echo ${Host_Private_IP[${i}]}
+#    echo ${Guest_Private_IP[${i}]}
+#    echo ${Guest_MAC_ADDR[${i}]}
+    cp ifcfg-ens2f0 ifcfg-ens2f0-"${i}"
+    echo "IPADDR=${Guest_Private_IP[${i}]}" >> ifcfg-ens2f0-"${i}"
+    echo "MACADDR=${Guest_MAC_ADDR[${i}]}" >> ifcfg-ens2f0-"${i}"
+    i=$[$i+1]
+done 
 
 

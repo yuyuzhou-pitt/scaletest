@@ -53,7 +53,7 @@ palacios=0
 #################### Run baremetal experiment ################
 if [ $baremetal == 1 ]; then
    echo baremetal
-   ssh cc@10.20.108.140 'bash -s' < ./baremetal/init_baremetal_master.sh 
+   #ssh cc@10.20.108.140 'bash -s' < ./baremetal/init_baremetal_master.sh 
    ssh cc@10.20.108.184 'bash -s' < ./baremetal/init_baremetal_slave.sh
 
 fi

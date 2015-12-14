@@ -1,5 +1,6 @@
 <vm class="PC"> 
-	<memory size="1024"/>
+	<memory size="81920">
+        </memory>
 
 	<telemetry>enable</telemetry>
 	
@@ -9,17 +10,38 @@
 
 	<schedule_hz>100</schedule_hz>
 
- 
-    <!--mem_layout vnodes="1">
+<!--
+    <mem_layout vnodes="1">
         <region start_addr="0" end_addr="0x40000000" node="0" vnode="0"/>
-    </mem_layout-->
+    </mem_layout>
+-->
 
-
-    <cores count="1">
-        <core />
-    </cores>
-
-
+    <cores count="24">
+        <core target_cpu="0"/>
+        <core target_cpu="1"/>
+        <core target_cpu="2"/>
+        <core target_cpu="3"/>
+        <core target_cpu="4"/>
+        <core target_cpu="5"/>
+        <core target_cpu="6"/>
+        <core target_cpu="7"/>
+        <core target_cpu="8"/>
+        <core target_cpu="9"/>
+        <core target_cpu="10"/>
+        <core target_cpu="11"/>
+        <core target_cpu="12"/>
+        <core target_cpu="13"/>
+        <core target_cpu="14"/>
+        <core target_cpu="15"/>
+        <core target_cpu="16"/>
+        <core target_cpu="17"/>
+        <core target_cpu="18"/>
+        <core target_cpu="19"/>
+        <core target_cpu="20"/>
+        <core target_cpu="21"/>
+        <core target_cpu="22"/>
+        <core target_cpu="23"/> 
+     </cores>
 
 <!--
        <memmap>

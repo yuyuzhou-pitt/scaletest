@@ -27,7 +27,7 @@ current_pwd=/home/cc/new/scaletest/palacios
 cd /home/cc/exp/palacios/palacios
 sudo insmod v3vee.ko
 cd /home/cc/exp/palacios/palacios/linux_usr/
-sudo ./v3_mem 8
+sudo ./v3_mem 640
 sudo ./v3_pci -a nic 01:00.0
 sudo ./v3_create -b /home/cc/exp/images/centos7.xml vm
 sudo ./v3_launch /dev/v3-vm0

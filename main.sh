@@ -30,7 +30,7 @@ do
     fi
 done < "$filename"
 
-
+############ Generate all ifcfg file for guests ##########
 i=0
 while [ $i -lt $Nums ]; do
 #    echo ${Host_Public_IP[${i}]}

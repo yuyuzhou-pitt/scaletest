@@ -1,10 +1,10 @@
 #!/bin/bash -x
 
 # Set up which experiment is running:
-baremetal=0
+baremetal=1
 docker=0
 kvm=0
-palacios=1
+palacios=0
 
 
 # read all the ip and mac info from file
@@ -51,18 +51,18 @@ palacios=1
 #done 
 
 #################### Run baremetal experiment ################
-if [ baremetal == 1 ]; then
+if [ $baremetal == 1 ]; then
    echo baremetal
 fi
 
 ##################### Run docker experiment ###################
 
-if [ docker == 1 ]; then
+if [ $docker == 1 ]; then
    echo docker
 fi
 
 ##################### Run KVM experiment #####################
-if [ kvm == 1 ]; then
+if [ $kvm == 1 ]; then
    echo kvm
 fi
 

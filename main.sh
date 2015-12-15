@@ -1,13 +1,13 @@
 #!/bin/bash -x
 
 # Set up which experiment is running:
-baremetal=1
+baremetal=0
 docker=0
 kvm=0
 palacios=0
 
 settle=0
-clean=1
+clean=0
 
 
  read all the ip and mac info from file
@@ -70,6 +70,13 @@ if [ $baremetal == 1 ]; then
     fi
     if [ $clean == 1 ]; then
        echo clean
+       i=$[$Nums-1]
+       while  [ $i -gt 0 ];do 
+           echo $i
+           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/clean_barematel_slave.sh
+           i=$[$i-1]
+      done  
+       ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/clean_barematel_master.sh
     fi
 fi
 

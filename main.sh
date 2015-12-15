@@ -6,6 +6,9 @@ docker=0
 kvm=0
 palacios=0
 
+settle=0
+clean=1
+
 
  read all the ip and mac info from file
 filename="ip_list.txt"
@@ -51,20 +54,26 @@ while [ $i -lt $Nums ]; do
     i=$[$i+1]
 done 
 
-#################### Run baremetal experiment ################
+#################### Baremetal experiment ################
 if [ $baremetal == 1 ]; then
    echo baremetal
-   i=0
-   ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/init_baremetal_master.sh 
-   i=$[$i+1]
-   while [ $i -lt $Nums ]; do
-       echo $i
-       ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/init_baremetal_slave.sh
-   i=$[$i+1]
-   done
+   if [ $settle == 1 ]; then
+       echo settle
+       i=0
+       ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/init_baremetal_master.sh 
+       i=$[$i+1]
+       while [ $i -lt $Nums ]; do
+           echo $i
+           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/init_baremetal_slave.sh
+       i=$[$i+1]
+       done
+    fi
+    if [ $clean == 1 ]; then
+       echo clean
+    fi
 fi
 
-##################### Run docker experiment ###################
+##################### Docker experiment ###################
 
 if [ $docker == 1 ]; then
    echo docker

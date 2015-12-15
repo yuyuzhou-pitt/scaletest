@@ -19,6 +19,7 @@ Guest_MAC_ADDR=()
 
 while read -r line
 do
+    echo $line
     if [[ $line == '#'* ]]; then 
         echo $line
       else if [ $Nums == -1 ] ; then
@@ -39,7 +40,7 @@ done < "$filename"
 ############ Generate all ifcfg file for guests ##########
 i=0
 while [ $i -lt $Nums ]; do
-#    echo ${Host_Public_IP[${i}]}
+     echo ${Host_Public_IP[${i}]}
 #    echo ${Host_Private_IP[${i}]}
 #    echo ${Guest_Private_IP[${i}]}
 #    echo ${Guest_MAC_ADDR[${i}]}
@@ -48,16 +49,18 @@ while [ $i -lt $Nums ]; do
     echo "MACADDR=${Guest_MAC_ADDR[${i}]}" >> ifcfg-ens2f0-"${i}"
     echo ${Host_Private_IP[${i}]} >> hostfile
     i=$[$i+1]
-one 
+done 
 
 #################### Run baremetal experiment ################
 if [ $baremetal == 1 ]; then
    echo baremetal
-   i=0;
+   i=0
    ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/init_baremetal_master.sh 
    i=$[$i+1]
    while [ $i -lt $Nums ]; do
+       echo $i
        ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./baremetal/init_baremetal_slave.sh
+   i=$[$i+1]
    done
 fi
 
@@ -78,4 +81,3 @@ if [ $palacios == 1 ]; then
     #ssh cc@10.20.108.14 date
     ssh cc@10.20.108.14 'bash -s' < ./palacios/init_palacios.sh
 fi
-

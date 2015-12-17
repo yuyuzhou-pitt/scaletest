@@ -3,10 +3,10 @@
 # Set up which experiment is running:
 baremetal=0
 docker=0
-kvm=0
+kvm=1
 palacios=0
 
-settle=0
+settle=1
 clean=0
 
 
@@ -84,16 +84,38 @@ fi
 
 if [ $docker == 1 ]; then
    echo docker
+   if [ $settle == 1 ]; then
+       echo settle  
+   fi
+   if [ $clean == 1 ]; then
+       echo clean
+   fi
 fi
 
 ##################### Run KVM experiment #####################
 if [ $kvm == 1 ]; then
    echo kvm
+   if [ $settle == 1 ]; then
+#        ssh cc@129.114.108.164 'bash -s' < ./kvm/init_kvm.sh
+       i=0
+       while [ $i -lt $Nums ]; do
+           echo $i
+           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/init_kvm.sh
+       i=$[$i+1]
+       done       
+   fi
+   if [ $clean == 1 ]; then
+      echo clean
+   fi
 fi
 
 
 ###################### Run Palacios experiment ###############
 if [ $palacios == 1 ]; then
-    #ssh cc@10.20.108.14 date
-    ssh cc@10.20.108.14 'bash -s' < ./palacios/init_palacios.sh
+    if [ $settle == 1 ]; then
+        ssh cc@10.20.108.14 'bash -s' < ./palacios/init_palacios.sh
+    fi 
+    if [ $clean == 1 ]; then
+       echo clean
+    fi
 fi

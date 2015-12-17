@@ -96,11 +96,13 @@ fi
 if [ $kvm == 1 ]; then
    echo kvm
    if [ $settle == 1 ]; then
-#        ssh cc@129.114.108.164 'bash -s' < ./kvm/init_kvm.sh
-       i=0
+#       ssh cc@129.114.108.164 'bash -s' < ./kvm/init_kvm.sh
+       i=2
        while [ $i -lt $Nums ]; do
            echo $i
-           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/init_kvm.sh
+           echo ${Host_Private_IP[$i]}
+#          ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/init_kvm.sh
+           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/afterboot_kvm.sh
        i=$[$i+1]
        done       
    fi

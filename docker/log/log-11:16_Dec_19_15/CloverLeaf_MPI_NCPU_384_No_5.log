@@ -1,0 +1,117 @@
+
+Clover Version    1.000
+       MPI Version
+   Task Count    384
+
+
+Clover Version    1.000
+       MPI Version
+   Task Count    384
+
+ Output file clover.out opened. All output will go there.
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+Fatal error in PMPI_Waitall: See the MPI_ERROR field in MPI_Status for the error code
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   EXIT CODE: 1
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:1@c2d96ed1f5a0] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:1@c2d96ed1f5a0] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:1@c2d96ed1f5a0] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@fac0c73f803a] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:4@fac0c73f803a] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:4@fac0c73f803a] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@99405a24a564] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:5@99405a24a564] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:5@99405a24a564] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@e7c238fbe558] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:6@e7c238fbe558] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:6@e7c238fbe558] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@509da3f37d4a] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:7@509da3f37d4a] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:7@509da3f37d4a] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@2b706e52154f] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:11@2b706e52154f] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:11@2b706e52154f] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@e67965582c78] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:13@e67965582c78] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:13@e67965582c78] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@c48bca7e9414] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:2@c48bca7e9414] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:2@c48bca7e9414] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@7be777408dfa] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:10@7be777408dfa] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:10@7be777408dfa] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@9fe3aa2a5d34] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:15@9fe3aa2a5d34] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:15@9fe3aa2a5d34] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@db6874ea08b1] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:12@db6874ea08b1] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:12@db6874ea08b1] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@9c4b81a2c038] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:9@9c4b81a2c038] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:9@9c4b81a2c038] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:0@b6b1f9410a3a] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:0@b6b1f9410a3a] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:0@b6b1f9410a3a] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@440239f6b6f7] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:8@440239f6b6f7] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:8@440239f6b6f7] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@346bbdfd1487] HYD_pmcd_pmip_control_cmd_cb (./pm/pmiserv/pmip_cb.c:886): assert (!closed) failed
+[proxy:0:14@346bbdfd1487] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:77): callback returned error status
+[proxy:0:14@346bbdfd1487] main (./pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d0e48ab7c3e0] HYDT_bscu_wait_for_completion (./tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d0e48ab7c3e0] HYDT_bsci_wait_for_completion (./tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d0e48ab7c3e0] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:217): launcher returned error waiting for completion
+[mpiexec@d0e48ab7c3e0] main (./ui/mpich/mpiexec.c:331): process manager error waiting for completion
+real 127.99
+user 0.02
+sys 0.02

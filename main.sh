@@ -2,8 +2,8 @@
 
 # Set up which experiment is running:
 baremetal=0
-docker=0
-kvm=1
+docker=1
+kvm=0
 palacios=0
 
 settle=1

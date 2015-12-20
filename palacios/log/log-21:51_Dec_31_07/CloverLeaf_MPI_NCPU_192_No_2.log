@@ -1,0 +1,51 @@
+
+Clover Version    1.000
+       MPI Version
+   Task Count    192
+
+ Output file clover.out opened. All output will go there.
+
+Clover Version    1.000
+       MPI Version
+   Task Count    192
+
+ Step       1 time   0.0000000 control    sound    timestep   1.93E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    3.7444870471954346     
+ Average time per cell    7.9356025000581406E-009
+ Step time per cell       7.9356025000581406E-009
+ Step       2 time   0.0001926 control    sound    timestep   1.62E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    7.2375800609588623     
+ Average time per cell    7.6692157967449417E-009
+ Step time per cell       7.4026279940476851E-009
+ Step       3 time   0.0003548 control    sound    timestep   1.48E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    11.145047903060913     
+ Average time per cell    7.8731451409381681E-009
+ Step time per cell       8.2807516971822937E-009
+ Step       4 time   0.0005028 control    sound    timestep   1.54E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    14.655884027481079     
+ Average time per cell    7.7649667673540529E-009
+ Step time per cell       7.4400921019130491E-009
+ Step       5 time   0.0006573 control    sound    timestep   1.68E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    18.115016937255859     
+ Average time per cell    7.6781450641444990E-009
+ Step time per cell       7.3305338648626480E-009
+ Step       6 time   0.0008248 control    sound    timestep   1.74E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    21.692080020904541     
+ Average time per cell    7.6619183649503009E-009
+ Step time per cell       7.5805241471648003E-009
+ Step       7 time   0.0009990 control    sound    timestep   1.77E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    25.274638891220093     
+ Average time per cell    7.6519917355552836E-009
+ Step time per cell       7.5921207098872401E-009
+ Step       8 time   0.0011761 control    sound    timestep   1.83E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    28.950327873229980     
+ Average time per cell    7.6692178178442800E-009
+ Step time per cell       7.7865580452554337E-009
+ Step       9 time   0.0013593 control    sound    timestep   1.82E-04       1,       1 x  1.63E-04 y  3.26E-04
+ Wall clock    32.665680885314941     
+ Average time per cell    7.6919557748759104E-009
+ Step time per cell       7.8735138231422756E-009
+ Step      10 time   0.0015413 control    sound    timestep   1.82E-04       1,       1 x  1.63E-04 y  3.26E-04
+real 605.57
+user 0.00
+sys 0.00

@@ -2,9 +2,9 @@
 
 # Set up which experiment is running:
 baremetal=0
-docker=1
+docker=0
 kvm=0
-palacios=0
+palacios=1
 
 settle=1
 clean=0
@@ -115,7 +115,16 @@ fi
 ###################### Run Palacios experiment ###############
 if [ $palacios == 1 ]; then
     if [ $settle == 1 ]; then
-        ssh cc@10.20.108.14 'bash -s' < ./palacios/init_palacios.sh
+       i=11
+       echo $i
+       echo ${Host_Private_IP[$i]}
+       ssh cc@${Host_Private_IP[$i]} 'bash -s' < ./palacios/init_palacios.sh 
+       #i=3
+       # while [ $i -lt $Nums ]; do
+       #     echo $i
+       #     ssh cc@${Host_Private_IP[$i]} 'bash -s' < ./palacios/init_palacios.sh
+       #     i=$[$i+1]
+       # done
     fi 
     if [ $clean == 1 ]; then
        echo clean

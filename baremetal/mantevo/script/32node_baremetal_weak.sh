@@ -42,7 +42,7 @@ cp $SCRIPT_DIR/host* ./
 for NCPU in 24 48 96 192 384 768; do # scale up cpu
     bm_val=$[NCPU/24*64]
     cp clover_bm"$bm_val"_short.in clover.in
-    for i in 0 1 2 3 4;do # run 10 times to get average
+    for i in 0 1 2 3 4 5 6 7 8 9;do # run 10 times to get average
        (time -p mpirun -np $NCPU --hostfile ./hostfile"$NCPU" taskset -c 0-23 ./clover_leaf) > $LOGDIR/CloverLeaf_MPI_NCPU_"$NCPU"_No_"$i".log 2>&1
    done
 done
@@ -51,7 +51,7 @@ cd -
 cd CoMD_Ref/bin
 cp $SCRIPT_DIR/host* ./
 for NCPU in 24 48 96 192 384 768; do # scale up cpu
-    for i in 0 1 2 3 4;do # run 10 times to get average
+    for i in 0 1 2 3 4 5 6 7 8 9;do # run 10 times to get average
        case $NCPU in
            24)
               (time -p mpirun -np $NCPU --hostfile ./hostfile"$NCPU" taskset -c 0-23 ./CoMD-mpi -i 2 -j 4 -k 3 -x 144 -y 144 -z 144) > $LOGDIR/CoMD_MPI_NCPU_"$NCPU"_No_"$i".log 2>&1
@@ -80,7 +80,7 @@ cd -
 cd miniFE-2.0_ref/src/
 cp $SCRIPT_DIR/host* ./
 for NCPU in 24 48 96 192 384 768 ; do # scale up cpu
-    for i in 0 1 2 3 4; do #  run 10 times to get average
+    for i in 0 1 2 3 4 5 6 7 8 9; do #  run 10 times to get average
         case $NCPU in
         24)
             (time -p mpirun -np $NCPU --hostfile ./hostfile"$NCPU" taskset -c 0-23 ./miniFE.x nx=256 ny=256 nz=420) > $LOGDIR/miniFE_MPI_NCPU_"$NCPU"_No_"$i".log 2>&1

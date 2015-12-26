@@ -1,0 +1,22 @@
+      creating/filling mesh...0.0696838s, total time: 0.0696838
+generating matrix structure...1.81613s, total time: 1.88582
+         assembling FE data...3.28291s, total time: 5.16872
+      imposing Dirichlet BC...0.51004s, total time: 5.67876
+      imposing Dirichlet BC...0.038965s, total time: 5.71773
+making matrix indices local...0.927273s, total time: 6.645
+Starting CG solver ... 
+Initial Residual = 656.836
+Iteration = 20   Residual = 0.0884182
+Iteration = 40   Residual = 0.046202
+Iteration = 60   Residual = 0.0765588
+Iteration = 80   Residual = 0.0232523
+Iteration = 100   Residual = 0.0172792
+Iteration = 120   Residual = 0.0140157
+Iteration = 140   Residual = 0.0118412
+Iteration = 160   Residual = 0.0120409
+Iteration = 180   Residual = 0.00881928
+Iteration = 200   Residual = 0.00776062
+Final Resid Norm: 0.00776062
+real 62.80
+user 1253.00
+sys 241.11

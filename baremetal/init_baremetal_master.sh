@@ -1,4 +1,4 @@
-current_ip=10.20.108.49
+current_ip=10.20.108.108
 current_pwd=/home/cc/new/scaletest/baremetal
 
 
@@ -21,3 +21,8 @@ scp "$current_ip":"$current_pwd"/exports /home/cc/exports
 sudo mv /home/cc/exports /etc/exports
 sudo service nfs restart
 sudo exportfs -a
+sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled" 
+sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/defrag"
+
+#sudo sysctl -w vm.nr_hugepages=40960
+#sudo mount -t hugetlbfs hugetlbfs /dev/hugepages

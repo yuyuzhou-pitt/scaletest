@@ -17,4 +17,5 @@
 #sudo systemctl start nfs-server
 #sudo systemctl start nfs-lock
 sudo umount /home/cc/exp/baremetal/mantevo
-
+sudo umount  /dev/hugepages/
+sudo sysctl -w vm.nr_hugepages=0

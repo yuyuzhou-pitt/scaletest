@@ -18,22 +18,22 @@ mkdir -p "$LOGDIR"
 
 #unzip mantevo
 cd /home/cc/exp/baremetal/mantevo/
-#tar xzvf CloverLeaf-1.1.tar.gz
-#tar xzvf CoMD_Ref.tgz
-#tar xzvf miniFE-2.0_ref.tgz
+tar xzvf CloverLeaf-1.1.tar.gz
+tar xzvf CoMD_Ref.tgz
+tar xzvf miniFE-2.0_ref.tgz
  
 # compiler each mini application
 cd CloverLeaf-1.1/CloverLeaf_MPI
-#make
+make
 cd -
  
 cd CoMD_Ref/src-mpi
-#cp Makefile.vanilla Makefile
-#make
+cp Makefile.vanilla Makefile
+make
 cd -
   
 cd miniFE-2.0_ref/src/
-#make
+make
 cd - 
 
 cd CloverLeaf-1.1/CloverLeaf_MPI

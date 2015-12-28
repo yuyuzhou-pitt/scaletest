@@ -21,3 +21,6 @@
 #sudo mv /home/cc/exports /etc/exports
 sudo service nfs stop
 #sudo exportfs -a
+sudo umount  /dev/hugepages/
+sudo sysctl -w vm.nr_hugepages=0
+

@@ -1,6 +1,6 @@
-current_ip=10.20.108.49
+current_ip=10.20.108.108
 current_pwd=/home/cc/new/scaletest/baremetal
-master_ip=10.20.108.49
+master_ip=10.20.108.108
 
 mkdir -p /home/cc/exp/baremetal/mantevo/script
 mkdir -p /home/cc/exp/baremetal/log
@@ -17,4 +17,7 @@ sudo systemctl start rpcbind
 sudo systemctl start nfs-server
 sudo systemctl start nfs-lock
 sudo mount "$master_ip":/home/cc/exp/baremetal/mantevo /home/cc/exp/baremetal/mantevo
-
+sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled" 
+sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/defrag"
+#sudo sysctl -w vm.nr_hugepages=40960
+#sudo mount -t hugetlbfs hugetlbfs /dev/hugepages

@@ -1,0 +1,145 @@
+Mon Dec 28 17:14:00 2015: Starting Initialization
+
+
+Mini-Application Name    : CoMD-mpi
+Mini-Application Version : 1.1
+Platform:
+  hostname: test-c16595bc-1016-4b8b-bbe3-01bc27f9c84c.novalocal
+  kernel name: 'Linux'
+  kernel release: '3.10.0-229.4.2.el7.x86_64'
+  processor: 'x86_64'
+Build:
+  CC: '/usr/lib64/mpich/bin/mpicc'
+  compiler version: 'cc (GCC) 4.8.3 20140911 (Red Hat 4.8.3-9)'
+  CFLAGS: '-std=c99 -DDOUBLE -DDO_MPI -g -O5   '
+  LDFLAGS: ' -lm '
+  using MPI: true
+  Threading: none
+  Double Precision: true
+Run Date/Time: 2015-12-28, 17:14:00
+
+Command Line Parameters:
+  doeam: 0
+  potDir: pots
+  potName: Cu_u6.eam
+  potType: funcfl
+  nx: 288
+  ny: 288
+  nz: 288
+  xproc: 4
+  yproc: 8
+  zproc: 6
+  Lattice constant: -1 Angstroms
+  nSteps: 100
+  printRate: 10
+  Time step: 1 fs
+  Initial Temperature: 600 K
+  Initial Delta: 0 Angstroms
+
+Simulation data: 
+  Total atoms        : 95551488
+  Min global bounds  : [   0.0000000000,   0.0000000000,   0.0000000000 ]
+  Max global bounds  : [ 1041.1200000000, 1041.1200000000, 1041.1200000000 ]
+
+Decomposition data: 
+  Processors         :      4,     8,     6
+  Local boxes        :     44,    22,    29 =    28072
+  Box size           : [   5.9154545455,   5.9154545455,   5.9834482759 ]
+  Box factor         : [   1.0221087768,   1.0221087768,   1.0338571535 ] 
+  Max Link Cell Occupancy: 32 of 64
+
+Potential data: 
+  Potential type   : Lennard-Jones
+  Species name     : Cu
+  Atomic number    : 29
+  Mass             : 63.55 amu
+  Lattice Type     : FCC
+  Lattice spacing  : 3.615 Angstroms
+  Cutoff           : 5.7875 Angstroms
+  Epsilon          : 0.167 eV
+  Sigma            : 2.315 Angstroms
+
+Memory data: 
+  Intrinsic atom footprint =   88 B/atom 
+  Total atom footprint     = -173.000 MB ( 41.77 MB/node)
+  Link cell atom footprint = 150.777 MB/node
+  Link cell atom footprint = 183.820 MB/node (including halo cell data
+
+
+Initial energy : -1.166063303635, atom count : 95551488 
+
+Mon Dec 28 17:14:02 2015: Initialization Finished
+
+Mon Dec 28 17:14:02 2015: Starting simulation
+
+#                                                                                         Performance
+#  Loop   Time(fs)       Total Energy   Potential Energy     Kinetic Energy  Temperature   (us/atom)     # Atoms
+      0       0.00    -1.166063303635    -1.243619295235     0.077555991600     600.0000     0.0000     95551488
+     10      10.00    -1.166059650944    -1.233155048472     0.067095397528     519.0732     3.2765     95551488
+     20      20.00    -1.166048430775    -1.208174729585     0.042126298809     325.9036     3.3757     95551488
+     30      30.00    -1.166037581189    -1.186579920198     0.020542339009     158.9226     3.2566     95551488
+     40      40.00    -1.166042096032    -1.183631183934     0.017589087902     136.0753     3.1326     95551488
+     50      50.00    -1.166051689718    -1.193724708926     0.027673019208     214.0881     3.3340     95551488
+     60      60.00    -1.166054644990    -1.202665414756     0.036610769766     283.2336     3.4755     95551488
+     70      70.00    -1.166052134677    -1.204904461803     0.038852327126     300.5751     3.2383     95551488
+     80      80.00    -1.166048795413    -1.203624981534     0.037576186121     290.7024     3.2719     95551488
+     90      90.00    -1.166048005239    -1.203815131967     0.037767126727     292.1796     3.2509     95551488
+    100     100.00    -1.166049792301    -1.206861213530     0.040811421230     315.7313     3.4408     95551488
+Mon Dec 28 17:16:46 2015: Ending simulation
+
+
+
+Simulation Validation:
+  Initial energy  : -1.166063303635
+  Final energy    : -1.166049792301
+  eFinal/eInitial : 0.999988
+  Final atom count : 95551488, no atoms lost
+
+
+Timings for Rank 0
+        Timer        # Calls    Avg/Call (s)   Total (s)    % Loop
+___________________________________________________________________
+total                      1     166.7887      166.7887      101.40
+loop                       1     164.4935      164.4935      100.00
+timestep                  10      16.4492      164.4919      100.00
+  position               100       0.0123        1.2277        0.75
+  velocity               200       0.0109        2.1804        1.33
+  redistribute           101       0.3261       32.9386       20.02
+    atomHalo             101       0.2861       28.8913       17.56
+  force                  101       1.2374      124.9726       75.97
+commHalo                 303       0.0906       27.4529       16.69
+commReduce                39       0.1261        4.9189        2.99
+
+Timing Statistics Across 192 Ranks:
+        Timer        Rank: Min(s)       Rank: Max(s)      Avg(s)    Stdev(s)
+_____________________________________________________________________________
+total              187:  166.7412     121:  166.7932    166.7802      0.0176
+loop                 5:  164.4935     153:  164.4936    164.4935      0.0000
+timestep             0:  164.4919      57:  164.4925    164.4922      0.0002
+  position         121:    0.9792     153:    1.7553      1.1790      0.0861
+  velocity          57:    1.6412     153:    3.2384      1.9707      0.1695
+  redistribute     130:   28.9870      52:   34.9283     33.5686      0.9048
+    atomHalo       153:   23.6482      52:   31.1575     29.6521      1.0665
+  force              5:  124.6041     130:  130.0463    125.3591      0.8797
+commHalo           153:   21.9309      52:   30.0976     28.4945      1.1557
+commReduce          54:    2.8898       0:    4.9189      4.1546      0.3694
+
+---------------------------------------------------
+ Average atom update rate:       3.31 us/atom/task
+---------------------------------------------------
+
+
+---------------------------------------------------
+ Average all atom update rate:   0.02 us/atom
+---------------------------------------------------
+
+
+---------------------------------------------------
+ Average atom rate:             58.09 atoms/us
+---------------------------------------------------
+
+Mon Dec 28 17:16:46 2015: CoMD Ending
+
+real 167.01
+user 3889.98
+sys 110.99

@@ -10,7 +10,7 @@ scp "$current_ip":"$current_pwd"/centos7-kvm-console.raw /home/cc/exp/images
 sudo mv /home/cc/exp/images/centos7-kvm-console.raw /var/lib/libvirt/images/
 scp "$current_ip":"$current_pwd"/*.xml /home/cc/exp/images
 cd /home/cc/exp/images/
-sudo virsh define centos7-kvm-3.xml
+sudo virsh define centos7-kvm-4.xml
 #sudo virsh nodedev-detach pci_0000_01_00_0
 #sudo virsh nodedev-detach pci_0000_01_00_1
 #sudo virsh nodedev-detach pci_0000_01_00_2

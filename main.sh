@@ -2,15 +2,15 @@
 
 # Set up which experiment is running:
 baremetal=0
-docker=0
+docker=1
 kvm=0
-palacios=1
+palacios=0
 
 settle=1
 clean=0
 
 
- read all the ip and mac info from file
+# Read all the ip and mac info from file
 filename="ip_list.txt"
 
 Nums=-1
@@ -44,7 +44,7 @@ done < "$filename"
 i=0
 while [ $i -lt $Nums ]; do
      echo ${Host_Public_IP[${i}]}
-#    echo ${Host_Private_IP[${i}]}
+#     echo ${Host_Private_IP[${i}]}
 #    echo ${Guest_Private_IP[${i}]}
 #    echo ${Guest_MAC_ADDR[${i}]}
     cp ifcfg-ens2f0 ifcfg-ens2f0-"${i}"
@@ -85,7 +85,19 @@ fi
 if [ $docker == 1 ]; then
    echo docker
    if [ $settle == 1 ]; then
-       echo settle  
+       MANTEVO=/home/cc/exp/baremetal/mantevo/
+       echo settle
+       i=0
+       ssh -t cc@${Host_Private_IP[$i]} sh -x ${MANTEVO}/docker_init.sh ${Guest_Private_IP[$i]}
+       i=1
+       while [ $i -lt 1 ]; do
+          echo $i
+          echo ${Host_Private_IP[$i]}
+          ssh cc@${Host_Private_IP[$i]} sudo umount -l ${MANTEVO}
+          ssh cc@${Host_Private_IP[$i]} sudo mount 10.20.108.125:${MANTEVO} ${MANTEVO}
+          ssh -t cc@${Host_Private_IP[$i]} sh -x ${MANTEVO}/docker_init.sh ${Guest_Private_IP[$i]}
+          i=$[$i+1]
+       done   
    fi
    if [ $clean == 1 ]; then
        echo clean
@@ -98,11 +110,11 @@ if [ $kvm == 1 ]; then
    if [ $settle == 1 ]; then
 #       ssh cc@129.114.108.164 'bash -s' < ./kvm/init_kvm.sh
        i=2
-       while [ $i -lt $Nums ]; do
+       while [ $i -lt 9 ]; do
            echo $i
            echo ${Host_Private_IP[$i]}
-#          ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/init_kvm.sh
-           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/afterboot_kvm.sh
+           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/init_kvm.sh
+#           ssh cc@${Host_Private_IP[${i}]} 'bash -s' < ./kvm/afterboot_kvm.sh
        i=$[$i+1]
        done       
    fi
